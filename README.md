@@ -31,21 +31,21 @@ Financial documents are notoriously difficult for standard RAG systems due to im
    cd LJMU-Theis-FinanicalRAG
 
 2. **Install Python dependencies:**
-pip install llama-index llama-index-embeddings-huggingface llama-index-llms-ollama chromadb torch tqdm
+   pip install llama-index llama-index-embeddings-huggingface llama-index-llms-ollama chromadb torch tqdm
 
 3. **Install and Configure Ollama:** 
-ollama run llama3
+   ollama run llama3
 
 4. **Dataset Setup:**
-This script is configured to parse the test.json file from the DocFinQA dataset.
+   This script is configured to parse the test.json file from the DocFinQA dataset.
+   
+   Ensure the JSON file contains the standard Context, Question, and Program keys.
+   
+   Update the TEST_JSON_PATH variable in the run_integrated_master_loop() function to point to your local dataset path.
+   
+   Update the SANDBOX_DB_PATH to your desired ChromaDB storage directory.
 
-Ensure the JSON file contains the standard Context, Question, and Program keys.
-
-Update the TEST_JSON_PATH variable in the run_integrated_master_loop() function to point to your local dataset path.
-
-Update the SANDBOX_DB_PATH to your desired ChromaDB storage directory.
-
-**Academic Context**
+🧠 **Academic Context**
 This ingestion engine was built to prove that financial RAG systems require deterministic, structure-aware parsing rather than pure generative autonomy. By forcing tabular data into row-atomic narrative statements before embedding, the system mitigates the spatial context smearing inherent to dense vector models when processing multi-column matrices.
 
 Developed as part of a Master of Science AI & ML Thesis.
