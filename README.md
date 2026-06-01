@@ -45,7 +45,7 @@ Financial documents are notoriously difficult for standard RAG systems due to im
    
    Update the SANDBOX_DB_PATH to your desired ChromaDB storage directory.
 
-🧠 **Academic Context**
+## 🧠 Academic Context
 This ingestion engine was built to prove that financial RAG systems require deterministic, structure-aware parsing rather than pure generative autonomy. By forcing tabular data into row-atomic narrative statements before embedding, the system mitigates the spatial context smearing inherent to dense vector models when processing multi-column matrices.
 
 Developed as part of a Master of Science AI & ML Thesis.
